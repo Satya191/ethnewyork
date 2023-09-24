@@ -9,7 +9,7 @@ const ExampleUI: NextPage = () => {
   const { writeAsync, isLoading } = useScaffoldContractWrite({
     contractName: "Wander",
     functionName: "getTiers",
-    args:1,
+    args:[1],
     onBlockConfirmation: txnReceipt => {
       console.log("📦 Transaction blockHash", txnReceipt.blockHash);
     },
@@ -17,9 +17,13 @@ const ExampleUI: NextPage = () => {
 
   return (
     <>
-      <h1>Create Promotion</h1>
-      <h1> TESTING </h1>
-      <button onClick={() => writeAsync()}>Test Button</button>
+      <h1>GET TIERS FUNCTION CALL</h1>
+      <button onClick={() => writeAsync()}>getTiers</button>
+
+      
+
+
+
       
       
     </>
